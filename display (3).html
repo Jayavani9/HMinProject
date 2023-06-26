@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body style="background-image:url('diaa7.jpg');padding-top:3%;background-size:cover">
+
+
+<div class="container">
+
+  <p style=...>
+    <center><h3 style="color:blue"> Enter Your Details</h3></center>
+  </p>
+
+<form name="check" class="form-horizontal" action="http://localhost:5000/predict_test" method="POST" target="Results">
+    <!--<div class="form-group">
+      <label class="control-label col-sm-4" for="QA"><p style=color:black>Q/A</p></label>
+      <div class="col-sm-5">
+        <input type="text" class="form-control" id="QA"  name="QA">
+      </div>
+    </div>-->
+    <div class="form-group">
+      <label class="control-label col-sm-4" for="age"><p style="color:green">age</p></label>
+      <div class="col-sm-5">
+        <input type="text" class="form-control" id="age"  name="age">
+          <p>Enter your age</p>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label col-sm-4" for="sex"><p style="color:green">gender</p></label>
+      <div class="col-sm-5">
+        <input type="text" class="form-control" id="sex"  name="sex">
+          <p>Range:[0-1] 1=male;0=female</p>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label col-sm-4" for="cp"><p style="color:green">cp</p></label>
+      <div class="col-sm-5">
+        <input type="text" class="form-control" id="cp"  name="cp">
+          <p>Chest pain type Range:[0-3]</p>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label col-sm-4" for="trestbps"><p style="color:green">trestbps</p></label>
+      <div class="col-sm-5">
+        <input type="text" class="form-control" id="trestbps"  name="trestbps">
+          <p>Resting blood pressure count</p>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label col-sm-4" for="chol"><p style="color:green">chol</p></label>
+      <div class="col-sm-5">
+        <input type="text" class="form-control" id="chol"  name="chol">
+          <p>Serum cholestoral in mg/dl</p>
+      </div>
+    </div>
+
+
+
+        <div class="form-group">
+      <label class="control-label col-sm-4" for="fbs"><p style="color:green">fbs</p></label>
+      <div class="col-sm-5">
+        <input type="text" class="form-control" id="fbs"  name="fbs">
+          <p>Fasting blood sugar Range:[0-1] 1=true;0=false</p>
+      </div>
+    </div>
+
+     <div class="form-group">
+      <label class="control-label col-sm-4" for="restecg"><p style="color:green">restecg</p></label>
+      <div class="col-sm-5">
+        <input type="text" class="form-control" id="restecg"  name="restecg">
+          <p>Range:[0-2] Resting electrocardiographic results</p>
+      </div>
+    </div>
+
+
+		<div class="form-group">
+      <label class="control-label col-sm-4" for="thalach"><p style="color:green">thalach</p></label>
+      <div class="col-sm-5">
+        <input type="text" class="form-control" id="thalach"  name="thalach">
+          <p>Maximum heart rate achieved</p>
+      </div>
+    </div>
+
+     <div class="form-group">
+      <label class="control-label col-sm-4" for="exang"><p style="color:green">exang</p></label>
+      <div class="col-sm-5">
+        <input type="text" class="form-control" id="exang"  name="exang">
+           <p>Exercise induced angina (1 = yes; 0 = no)</p>
+      </div>
+     </div>
+	 
+	  <div class="form-group">
+      <label class="control-label col-sm-4" for="oldpeak"><p style="color:green">oldpeak</p></label>
+      <div class="col-sm-5">
+        <input type="text" class="form-control" id="oldpeak"  name="oldpeak">
+          <p>ST depression induced by exercise relative to rest</p>
+      </div>
+     </div>
+	 
+	 <div class="form-group">
+      <label class="control-label col-sm-4" for="slope"><p style="color:green">slope</p></label>
+      <div class="col-sm-5">
+        <input type="text" class="form-control" id="slope"  name="slope">
+          <p>The slope of the peak exercise ST segment</p>
+      </div>
+     </div>
+	 
+	 <div class="form-group">
+      <label class="control-label col-sm-4" for="ca"><p style="color:green">ca</p></label>
+      <div class="col-sm-5">
+        <input type="text" class="form-control" id="ca"  name="ca">
+           <p>Number of major vessels (0-3) colored by flourosopy</p>
+      </div>
+     </div>
+	 
+	 <div class="form-group">
+      <label class="control-label col-sm-4" for="thal"><p style="color:green">thal</p></label>
+      <div class="col-sm-5">
+        <input type="text" class="form-control" id="thal"  name="thal">
+          <p>3=normal,6=fixed defect,7=reversable defect</p>
+      </div>
+     </div>
+
+
+
+
+    <div class="form-group">
+      <div class="col-sm-offset-3 col-sm-6">
+        <button type="reset" class="btn btn-default">Reset</button>
+
+
+
+      <div class="col-sm-offset-3 col-sm-6">
+        <button type="submit" class="btn btn-default">Submit</button>
+      </div>
+</div>
+</div>
+  </form>
+      <div class="form-group">
+      <label class="control-label col-sm-4"><p style="color:green">Result:</p></label>
+      <div class="col-sm-5">
+        <iframe name="Results" width="450" height="50"></iframe>
+      </div>
+      </div>
+
+</div>
+</body>
+</html>
